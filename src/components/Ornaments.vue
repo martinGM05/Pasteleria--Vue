@@ -9,6 +9,7 @@
         :modules="modules"
         :slides-per-view="3"
         :space-between="20"
+        :breakpoints="$store.state.breakpoints"
         navigation
         :pagination="{ clickable: true }"
         @swiper="onSwiper"

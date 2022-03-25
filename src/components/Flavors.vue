@@ -8,6 +8,7 @@
         :modules="modules"
         :slides-per-view="3"
         :space-between="20"
+        :breakpoints="$store.state.breakpoints"
         navigation
         :pagination="{ clickable: true }"
         @swiper="onSwiper"
@@ -59,10 +60,12 @@ export default {
     const onSlideChange = () => {
       console.log("slide change");
     };
+    
     return {
       onSwiper,
       onSlideChange,
       modules: [Navigation, Pagination, A11y],
+      
     };
   },
 };

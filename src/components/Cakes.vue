@@ -6,6 +6,7 @@
     <div class="pasteles">
       <swiper
         :slidesPerView="4"
+        :breakpoints="$store.state.breakpoints"
         :grid="{
           rows: 1,
         }"

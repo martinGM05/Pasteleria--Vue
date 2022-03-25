@@ -170,7 +170,25 @@ export default createStore({
         Precio: '$200.00',
         Accion: 'Pendiente' 
       },
-    ]
+    ],
+    breakpoints: {
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      640: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 10,
+      },
+    },
   },
   getters: {
     getFlavors: state => {
@@ -205,7 +223,7 @@ export default createStore({
           }
         })
       })
-    }
+    },
   },
   actions: {
     addOrder({ commit }, order) {
