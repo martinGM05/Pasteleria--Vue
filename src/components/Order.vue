@@ -133,6 +133,7 @@ export default {
   },
   methods: {
     onSubmit() {
+      event.preventDefault();
       if (this.name === "" || this.email === "" || this.phone === "" || this.description === "") {
         Swal.fire({
           title: "Error",
